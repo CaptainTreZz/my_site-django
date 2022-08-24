@@ -1,8 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-from service.views import index
+from django.urls import path, include
 
 urlpatterns = [
-    path('service/', index),
-    path('admin/', admin.site.urls),
+    path('', include('service.urls')),
+    path('admin/', admin.site.urls)
 ]
